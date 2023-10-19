@@ -8,7 +8,6 @@
 //     println!("Another function.")
 // }
 
-
 // Example function with argument
 // fn main() {
 //     another_function(5);
@@ -27,6 +26,7 @@
 //     println!("The measurement is: {value}{unit_label}")
 // }
 
+
 // Statements and Expressions
 
 
@@ -43,15 +43,28 @@
 //     let x = (let y = 6);
 // }
 
-fn main() {
-    let y = 
-    // This is an expression: 
-    {
-        let x = 3;
-        // That line doesn't have semicolon, in case it have that line becomes a statement and doesn't return any value
-        x + 1
-    };
+// fn main() {
+//     let y = 
+//     // This is an expression: 
+//     {
+//         let x = 3;
+//         // That line doesn't have semicolon, in case it have that line becomes a statement and doesn't return any value
+//         x + 1
+//     };
+//
+//     println!("The value of y is: {y}");
+// }
 
-    println!("The value of y is: {y}");
+
+// Functions with Return Values
+
+// Example of functions that returns values by last expression
+ fn five() -> i32 {
+    5
 }
 
+fn main() {
+    let x = five();
+
+    println!("The value of x is: {x}");
+}
