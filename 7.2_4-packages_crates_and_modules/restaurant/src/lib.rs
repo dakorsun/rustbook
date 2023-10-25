@@ -37,11 +37,22 @@ mod back_of_house {
     fn cook_order() {}
 }
 
+use crate::front_of_house::hosting;
+
+mod customer {
+    pub fn eat_at_restaurant() {
+        // This wont work because hosting has a shortcut for a upper scope, not this exactly
+        // hosting::add_to_waitlist();
+    }
+}
+
 pub fn eat_at_restaurant() {
     // //Absolute path
     // crate::front_of_house::hosting::add_to_waitlist();
     // //Relative path
     // front_of_house::hosting::add_to_waitlist();
+
+    hosting::add_to_waitlist();
 
     // Order a breakfast in the summer with Rye toast
     let mut meal = back_of_house::Breakfast::summer("Rye");
